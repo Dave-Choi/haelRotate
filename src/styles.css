@@ -1,0 +1,79 @@
+body {
+  background-color: black;
+}
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  --reel-width: 185px;
+  --reel-height: 185px;
+}
+
+.game-art {
+  height: var(--reel-height);
+  width: var(--reel-width);
+  object-fit: contain;
+}
+
+.reel {
+  width: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.frame {
+  width: 700px;
+  left: 0;
+  z-index: 2000;
+  /* opacity: 90%; */
+}
+
+.reel-container {
+  margin-top: -320px;
+  margin-left: 100px;
+
+  height: var(--reel-height);
+  width: var(--reel-width);
+
+  overflow: hidden;
+  border: solid red 1px;
+  transform: rotate(-45deg);
+  background-color: black;
+}
+
+.spin-button {
+  margin-top: 180px;
+  z-index: 2100;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.preload-container {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.googly-eye {
+  height: 150px;
+  width: 150px;
+  z-index: 5000;
+  position: absolute;
+
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.googly-eye .iris {
+  position: absolute;
+  background-color: black;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
